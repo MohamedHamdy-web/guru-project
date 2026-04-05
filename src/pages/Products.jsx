@@ -10,7 +10,7 @@ function Products() {
       .then((res) => res.json())
       .then((data) => setProducts(data.products));
   }, []);
-
+  // comment
   return (
     <div>
       <Navbar />
