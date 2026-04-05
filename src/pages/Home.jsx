@@ -10,7 +10,7 @@ function Home() {
     fetch("https://dummyjson.com/products")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data); // 👈 check structure
+        console.log(data);
         setProducts(data.products);
       })
       .catch((err) => console.log(err));
