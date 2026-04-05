@@ -5,13 +5,13 @@ function ProductCard({ product }) {
   const [liked, setLiked] = useState(false);
 
   return (
-    <div className="bg-white rounded-2xl overflow-hidden shadow-sm">
+    <div className="bg-white rounded-3xl overflow-hidden shadow-sm h-80 flex flex-col">
       {/* Image */}
-      <div className="relative">
+      <div className="relative w-full h-44">
         <img
           src={product.thumbnail}
           alt={product.title}
-          className="w-full h-50 object-cover"
+          className="w-full h-full object-cover"
         />
 
         {/* Heart */}
@@ -26,10 +26,10 @@ function ProductCard({ product }) {
       </div>
 
       {/* Info */}
-      <div className="p-3">
+      <div className="p-3 flex flex-col justify-between flex-1">
         <div>
           <h3 className="flex justify-between font-bold text-sm">
-            <span>{product.title}</span>
+            <span className="truncate">{product.title}</span>
             <span>{product.price}$</span>
           </h3>
         </div>
