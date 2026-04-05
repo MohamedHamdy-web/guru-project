@@ -1,7 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import ProductCard from "./ProductCard";
 
 function ProductsSection({ products }) {
-  const limitedProducts = products.slice(0, 8); // 👈 only 8 items
+  const navigate = useNavigate();
+  const limitedProducts = products.slice(0, 8);
 
   return (
     <section className="px-8 mt-10">
@@ -14,7 +16,10 @@ function ProductsSection({ products }) {
       </div>
 
       <div className="flex justify-center mt-8">
-        <button className="px-6 py-2 text-red-600 font-bold hover:bg-red-500 hover:text-white transition">
+        <button
+          onClick={() => navigate("/products")}
+          className="px-6 py-2  text-red-600 font-bold hover:bg-red-500  hover:text-white transition rounded-full hover:border-red-500 cursor-pointer"
+        >
           See More
         </button>
       </div>
